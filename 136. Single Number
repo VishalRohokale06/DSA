@@ -1,0 +1,8 @@
+class Solution{
+	public int singleNum(int[] num){
+		int unum=0;
+		for(int n:num){
+			unum ^= n;
+		}
+		return unum;
+}
