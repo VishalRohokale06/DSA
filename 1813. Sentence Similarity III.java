@@ -1,0 +1,18 @@
+class Solution {
+    public boolean areSentencesSimilar(String sentence1, String sentence2) {
+        String[] a = sentence1.split(" ");
+        String[] b = sentence2.split(" ");
+
+        int i=0;
+        while(i<a.length && i<b.length && a[i].equals(b[i])){
+            i++;
+        }
+
+        int j=0;
+        while(j<a.length-i && j<b.length-i && a[a.length-1-j].equals(b[b.length-1-j])){
+            j++;
+        }
+
+        return i+j>=Math.min(a.length,b.length);
+    }
+}
